@@ -180,14 +180,16 @@ nav a:hover { color: #fbbf24; }
 .merida-view .container > * { position: relative; z-index: 1; }
 
 /* Trujillo page themed background (use static/trujillo-bg.jpg) */
-.trujillo-view .container {
-	position: relative;
-	overflow: hidden;
+body.trujillo-view {
 	background-image: url('static/cuevaaaa.jpeg');
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
-	border-radius: 16px;
+}
+.trujillo-view .container {
+	background: transparent !important;
+	position: relative;
+	z-index: 1;
 }
 .trujillo-view .container::after {
 	content: "";
@@ -195,19 +197,22 @@ nav a:hover { color: #fbbf24; }
 	inset: 0;
 	background: linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.45));
 	pointer-events: none;
+	z-index: 2;
 }
 .trujillo-view h1, .trujillo-view .section-title { color: #fff; }
 .trujillo-view .container > * { position: relative; z-index: 1; }
 
 /* Táchira page themed background (use static/tachira-bg.jpg) */
-.tachira-view .container {
-	position: relative;
-	overflow: hidden;
+body.tachira-view {
 	background-image: url('static/obelisco3.jpg');
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
-	border-radius: 16px;
+}
+.tachira-view .container {
+	background: transparent !important;
+	position: relative;
+	z-index: 1;
 }
 .tachira-view .container::after {
 	content: "";
@@ -215,13 +220,14 @@ nav a:hover { color: #fbbf24; }
 	inset: 0;
 	background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.42));
 	pointer-events: none;
+	z-index: 2;
 }
 /* Use higher-resolution backgrounds on HiDPI devices if provided (name with @2x)
    The file names should match the base image with @2x before the extension.
    e.g. static/cuevaa@2x.jpeg and static/obeliscoo@2x.jpg */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-	.trujillo-view .container { background-image: url('static/cuevaa@2x.jpeg'); }
-	.tachira-view .container { background-image: url('static/obeliscoo@2x.jpg'); }
+	body.trujillo-view { background-image: url('static/cuevaa@2x.jpeg'); }
+	body.tachira-view { background-image: url('static/obeliscoo@2x.jpg'); }
 }
 
 /* Helper to increase overlay darkness if background looks pixelated */
