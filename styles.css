@@ -1,3 +1,50 @@
+@media (max-width: 600px) {
+	.container.christmas {
+		padding: 1em !important;
+	}
+	.container.christmas h1 {
+		font-size: 1.3em !important;
+		margin-top: 2.5em !important;
+		margin-bottom: 0.5em !important;
+		word-break: break-word;
+	}
+	.container.christmas p {
+		font-size: 1em !important;
+		margin-bottom: 1.2em !important;
+	}
+	.container.christmas .top-logo {
+		width: 60px !important;
+		height: 60px !important;
+		max-width: 60px !important;
+		max-height: 60px !important;
+	}
+	.container.christmas > div[style*="position:relative"] > div[style*="left"] {
+		left: 8px !important;
+		top: 10px !important;
+	}
+	.container.christmas > div[style*="position:relative"] > div[style*="right"] {
+		right: 8px !important;
+		top: 10px !important;
+	}
+	.container.christmas .btn {
+		width: 90vw !important;
+		font-size: 1.1em !important;
+		padding: 0.8em 0 !important;
+		margin-bottom: 1.5em !important;
+	}
+	.container.christmas div[style*="display:flex"] {
+		flex-direction: column !important;
+		gap: 1em !important;
+		align-items: center !important;
+	}
+	.container.christmas div[style*="display:flex"] img {
+		width: 90vw !important;
+		height: auto !important;
+		max-width: 320px !important;
+		margin: 0 auto !important;
+		border-radius: 16px !important;
+	}
+}
 /* Logos más pequeños solo en el index (container.christmas) */
 .container.christmas .top-logo {
 	width: 80px;
