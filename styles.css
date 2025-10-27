@@ -1,50 +1,13 @@
+/* Logos más pequeños solo en el index (container.christmas) */
+.container.christmas .top-logo {
+	width: 80px;
+	height: 80px;
+	max-width: 80px;
+	max-height: 80px;
+}
 /* --- Mejoras responsivas solo para index.html --- */
 @media (max-width: 600px) {
-	.container.christmas {
-		padding-top: 3.5em !important;
-	}
-	.container.christmas h1 {
-		font-size: 1.3em !important;
-		margin-top: 2.8em !important;
-		margin-bottom: 0.5em !important;
-	}
-	.container.christmas p {
-		font-size: 1em !important;
-		margin-bottom: 1.2em !important;
-	}
-	.container.christmas .top-logo {
-		width: 40px !important;
-		height: 40px !important;
-		max-width: 40px !important;
-		max-height: 40px !important;
-		top: 16px !important;
-	}
-	.container.christmas > div[style*="position:relative"] > div[style*="left"] {
-		left: 8px !important;
-		top: 16px !important;
-	}
-	.container.christmas > div[style*="position:relative"] > div[style*="right"] {
-		right: 8px !important;
-		top: 16px !important;
-	}
-	.container.christmas .btn {
-		width: 90vw !important;
-		font-size: 1.1em !important;
-		padding: 0.8em 0 !important;
-		margin-bottom: 1.5em !important;
-	}
-	.container.christmas .gallery-flex {
-		flex-direction: column !important;
-		gap: 1em !important;
-		align-items: center !important;
-	}
-	.container.christmas .gallery-flex img {
-		width: 90vw !important;
-		height: auto !important;
-		max-width: 320px !important;
-		margin: 0 auto !important;
-		border-radius: 16px !important;
-	}
+	/* Sin reglas especiales para logos ni galería en index, vuelve al diseño anterior */
 }
 @media (max-width: 900px) {
 	.container {
