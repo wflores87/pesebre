@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Pesebre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Bienvenida</a>
+         <a href="Merida.html">Mérida</a>
+        <a href="Trujillo.html">Trujillo</a>
+        <a href="Tachira.html">Tachira</a>
+        <a href="Falcón.html">Falcón</a>
+        <a href="Lara.html">Lara</a>
+        <a href="Yaracuy.html">Yaracuy</a>
+        <a href="Zulia.html">Zulia</a>
+        <a href="Galeria.html">Galeria</a>
+    </nav>
+    <div class="container">
+        <h1 style="text-align:center;color:#2d3e50;">Bienvenidos al Pesebre Ganador</h1>
+        <p style="text-align:center;color:#222;">Selecciona una categoría para explorar toda la información que requiera saber de algun estado.</p>
+    <!-- Tarjeta vulnerabilidades eliminada de arriba -->
+        <!-- Grid de categorías debajo -->
+        <div class="card-grid">
+            <!-- Tarjeta vulnerabilidades igual a las otras, imagen arriba -->
+                <div class="card">
+                    <img src="static/merida2.png" alt="Yo Amo Mérida">
+                    <div class="card-title">Mérida</div>
+                    <a href="Merida.html" class="btn">Ver más</a>
+                </div>
+            <div class="card">
+                <img src="static/trujillo.png" alt="Yo Amo Trujillo">
+                <div class="card-title">Trujillo</div>
+                <a href="Trujillo.html" class="btn">Ver más</a>
+            </div>
+            <div class="card">
+                <img src="static/Tachira.png" alt="Yo Amo Táchira">
+                <div class="card-title">Táchira</div>
+                <a href="Tachira.html" class="btn">Ver más</a>
+            </div>
+            <div class="card">
+                <img src="static/falcon.png" alt="Yo Amo Falcón">
+                <div class="card-title">Falcón</div>
+                <a href="Falcon.html" class="btn">Ver más</a>
+            </div>
+            <!-- Tarjeta software antes de galeria -->
+            <div class="card">
+                <img src="static/Lara.png" alt="Yo Amo Lara">
+                <div class="card-title">Lara</div>
+                <a href="Lara.html" class="btn">Ver más</a>
+            </div>
+            <div class="card">
+                <img src="static/Yaracuy.png" alt="Yo Amo Yaracuy">
+                <div class="card-title">Yaracuy</div>
+                <a href="Yaracuy.html" class="btn">Ver más</a>
+            </div>
+            <div class="card">
+                <img src="static/zulia.png" alt="Yo Amo Zulia">
+                <div class="card-title">Zulia</div>
+                <a href="Zulia.html" class="btn">Ver más</a>
+            </div>
+            <!-- Tarjeta galeria al final -->
+            <div class="card">
+                <video id="card-gallery-video" src="static/gif.mp4" alt="Galeria" title="Galeria - Video" muted loop playsinline autoplay preload="auto" class="card-video">
+                    Tu navegador no soporta el elemento <code>video</code>. 
+                    <a href="static/gif.mp4">Descargar/Ver video</a>
+                </video>
+                <div class="card-title">Galeria</div>
+                <a href="Galeria.html" class="btn">Ver más</a>
+            </div>
+        </div>
+</body>
+<script>
+// Auto-play the gallery video when the page loads (muted). Keep click toggle for touch devices.
+(function(){
+    const vid = document.getElementById('card-gallery-video');
+    if (!vid) return;
+    // Try to play on load (some browsers block autoplay unless muted, we have muted)
+    document.addEventListener('DOMContentLoaded', () => {
+        vid.play().catch(()=>{});
+    });
+    // For touch devices: toggle play/pause on click
+    vid.addEventListener('click', () => {
+        if (vid.paused) vid.play().catch(()=>{});
+        else { vid.pause(); }
+    });
+})();
+</script>
+</html>
