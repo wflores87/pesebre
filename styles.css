@@ -148,7 +148,7 @@ body { font-family: 'Roboto', Arial, sans-serif; background: #f4f6fa; margin: 0;
 nav { background: #334155; padding: 1em; text-align: center; }
 nav a { color: #38bdf8; margin: 0 1em; text-decoration: none; font-weight: bold; }
 nav a:hover { color: #fbbf24; }
-.container { max-width: 900px; margin: 2em auto; background: #fff; border-radius: 16px; box-shadow: 0 8px 32px #0002; padding: 2em; }
+.container { max-width: 900px; margin: 2em auto; border-radius: 16px; box-shadow: 0 8px 32px #0002; padding: 2em; }
 
 /* Page-specific wider view for Trujillo (applies when <body class="wide-view">) */
 .wide-view .container {
@@ -181,33 +181,33 @@ nav a:hover { color: #fbbf24; }
 
 /* Trujillo page themed background (use static/trujillo-bg.jpg) */
 body.trujillo-view {
-	background-image: url('static/cuevaaaa.jpeg');
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
+	background: #f4f6fa !important;
+}
+body.trujillo-view::before {
+	display: none !important;
 }
 .trujillo-view .container {
-	background: transparent !important;
+	background: rgba(220,230,255,0.92) !important;
+	border-radius: 18px;
+	box-shadow: 0 8px 32px #0002;
 	position: relative;
 	z-index: 1;
+	max-width: 800px;
+	margin: 2em auto;
+	padding: 2em 1em 2em 1em;
 }
 .trujillo-view .container::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background: linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.45));
-	pointer-events: none;
-	z-index: 2;
+	display: none;
 }
 .trujillo-view h1, .trujillo-view .section-title { color: #fff; }
 .trujillo-view .container > * { position: relative; z-index: 1; }
 
 /* Táchira page themed background (use static/tachira-bg.jpg) */
 body.tachira-view {
-	background-image: url('static/obelisco3.jpg');
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
+	background: #f4f6fa !important;
+}
+body.tachira-view::before {
+	display: none !important;
 }
 .tachira-view .container {
 	background: transparent !important;
@@ -215,19 +215,18 @@ body.tachira-view {
 	z-index: 1;
 }
 .tachira-view .container::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.42));
-	pointer-events: none;
-	z-index: 2;
+	display: none;
 }
 /* Use higher-resolution backgrounds on HiDPI devices if provided (name with @2x)
    The file names should match the base image with @2x before the extension.
    e.g. static/cuevaa@2x.jpeg and static/obeliscoo@2x.jpg */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-	body.trujillo-view { background-image: url('static/cuevaa@2x.jpeg'); }
-	body.tachira-view { background-image: url('static/obeliscoo@2x.jpg'); }
+	body.trujillo-view::before {
+		background-image: linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.45)), url('static/cuevaa@2x.jpeg');
+	}
+	body.tachira-view::before {
+		background-image: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.42)), url('static/obeliscoo@2x.jpg');
+	}
 }
 
 /* Helper to increase overlay darkness if background looks pixelated */
