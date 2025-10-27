@@ -32,18 +32,23 @@
 		padding: 0.8em 0 !important;
 		margin-bottom: 1.5em !important;
 	}
-	.container.christmas div[style*="display:flex"] {
-		flex-direction: column !important;
-		gap: 1em !important;
-		align-items: center !important;
-	}
-	.container.christmas div[style*="display:flex"] img {
-		width: 90vw !important;
-		height: auto !important;
-		max-width: 320px !important;
-		margin: 0 auto !important;
-		border-radius: 16px !important;
-	}
+		.container.christmas div[style*="display:flex"] {
+			flex-direction: row !important;
+			gap: 0.5em !important;
+			align-items: flex-end !important;
+			justify-content: center !important;
+			flex-wrap: nowrap !important;
+		}
+		.container.christmas div[style*="display:flex"] img {
+			width: 30vw !important;
+			min-width: 0 !important;
+			max-width: 32vw !important;
+			height: auto !important;
+			max-height: 100px !important;
+			margin: 0 !important;
+			border-radius: 16px !important;
+			object-fit: cover !important;
+		}
 }
 /* Logos más pequeños solo en el index (container.christmas) */
 .container.christmas .top-logo {
@@ -387,7 +392,7 @@ nav a:hover { color: #fbbf24; }
 }
 .btn { display: inline-block; background: #38bdf8; color: #fff; border: none; border-radius: 6px; padding: 0.7em 1.2em; font-weight: bold; cursor: pointer; margin-top: 1em; text-decoration: none; transition: background 0.2s; }
 .btn:hover { background: #fbbf24; color: #222; }
-.section-title { font-size: 1.7em; color: #2d3e50; margin-bottom: 0.5em; }
+.section-title { font-size: 1.7em; color: #2d3e50; margin-bottom: 0.5em; text-align: center; }
 .category { margin-bottom: 2em; background: #f1f5f9; border-radius: 12px; padding: 1.5em; box-shadow: 0 2px 12px #0001; }
 .category h2 { color: #fbbf24; margin-top: 0; }
 .category ul { color: #222; }
